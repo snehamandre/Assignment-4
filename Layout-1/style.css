@@ -1,0 +1,60 @@
+body
+{
+    font-family: sans-serif;
+    display: grid;
+    width: 960px;
+    margin: 15px auto;
+    grid-gap:20px;
+    grid-template-rows: 80px 400px  200px 50px;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-areas: 
+    "logo . nav nav"
+    "feature_prod feature_prod feature_prod feature_prod"
+    "product1 product1 product2 product2"
+    "footer footer footer footer";
+}
+
+nav,div,footer
+{
+    background-color: lightgray;
+}
+
+nav
+{
+    grid-area: nav;
+    align-self: center;
+}
+
+nav ul
+{
+    list-style-type: none;
+    display: grid;
+    height: 40px;
+    grid-template: auto/repeat(4,1fr);
+    justify-items: center;
+    align-content:center;
+    margin: 0;
+    padding: 0;
+}
+
+#logo
+{
+    grid-area: logo;
+}
+#feature_prod
+{
+    grid-area: feature_prod;
+}
+#product1
+{
+    grid-area: product1;
+}
+#product2
+{
+    grid-area: product2;
+}
+footer
+{
+    text-align: center;
+    grid-area: footer;
+}
